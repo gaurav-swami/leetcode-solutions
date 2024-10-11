@@ -1,3 +1,5 @@
+#cannot pass the test
+
 def containsDuplicate( nums):
         """
         :type nums: List[int]
