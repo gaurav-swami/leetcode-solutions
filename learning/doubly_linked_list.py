@@ -10,10 +10,31 @@ class DoublyNode:
 
 head = tail = DoublyNode(1)
 
+def insert_at_beginning(head,tail,val):
+	new_node = DoublyNode(val,next=head)
+	head.prev = new_node
+	return new_node,tail
+
+def insert_at_end(head,tail,val):
+	new_node = DoublyNode(val,prev=tail)
+	tail.next = new_node
+	return head,new_node
+
 def display(head):
 	curr = head
 	elements = []
 	while curr:
-		elements.append(curr.val)
+		elements.append(str(curr.val))
 		curr = curr.next
-	list_string = ' -> '.join(elements) + ' None'
+	print('None <-> ' + ' <-> '.join(elements) + ' <-> None')
+
+display(head)
+
+head, tail = insert_at_beginning(head,tail,3)
+display(head)
+head, tail = insert_at_beginning(head,tail,5)
+display(head)
+head, tail = insert_at_end(head,tail,3)
+display(head)
+head, tail = insert_at_end(head,tail,5)
+display(head)
