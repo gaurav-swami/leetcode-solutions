@@ -12,8 +12,8 @@ class Node:
 def binary_tree(values: list)->Node:
 	global i
 	i+=1
-	if values[i]==-1: 
-		return 
+	if values[i]==-1 or i>=len(values): 
+		return None
 	node = Node(values[i])
 	node.left = binary_tree(values)
 	node.right = binary_tree(values)
@@ -46,11 +46,32 @@ def  breadth_first_search(node):
 		node = q.popleft()
 		print(node.val, end = " ")
 		if node.left: q.append(node.left)
-		if node.right: q.append(node.right)
-		
-	
+		if node.right: q.append(node.right)	
 
-breadth_first_search(binary_tree(values))
+def breadth_first_display(node):
+    if not node: 
+        return    
+    q = deque([node])
+    q.append(None)
+    while q:
+        node = q.popleft()
+        if node is None:
+        	print()
+        	if q:
+        		q.append(node)
+        	continue
+
+        print(node.val, end=" ")
+        if node.left: 
+            q.append(node.left)
+        if node.right:
+        	q.append(node.right)
+
+       
+        
+
+
+breadth_first_display(binary_tree(values))
 
 
 
