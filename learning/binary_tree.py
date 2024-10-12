@@ -19,10 +19,27 @@ def binary_tree(values: list)->Node:
 	return node
 	
 
-def display_tree(root, level=0, prefix="Root: "):
-    if root is not None:
-        print(   str(root.val),end = " ")
-        if root.left: display_tree(root.left, level + 1) 
-        if root.right: display_tree(root.right, level + 1)
+def preorder(node):
+	if not node:
+		return 
+		
+	print (node.val, end=" ")
+	preorder(node.left)
+	preorder(node.right)
 
-display_tree(binary_tree(values))
+
+def inorder(node):
+	if not node:
+		return
+	inorder(node.left)
+	print(node.val, end = " ")
+	inorder(node.right)
+
+def postorder(node):
+	if not node:
+		return
+	postorder(node.left)
+	postorder(node.right)
+	print(node.val, end = " ")
+
+postorder(binary_tree(values))
