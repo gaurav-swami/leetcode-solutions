@@ -1,6 +1,6 @@
 from collections import deque
 
-values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1]
+values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,4,-1,-1,-1]
 i=-1
 count = 0
 
@@ -78,6 +78,23 @@ def sum_nodes(node):
 		return 0
 	return sum_nodes(node.left) + sum_nodes(node.right)  + node.val
 
-print(sum_nodes(binary_tree(values)))
+
+def height(node):
+	if not node:
+		return 0
+	left_height = height(node.left)
+	right_height = height(node.right)
+	return max(left_height,right_height)+1
+
+def max_diameter(node):
+	if not node:
+		return 0
+	left_diameter = max_diameter(node.left)
+	right_diameter = max_diameter(node.right)
+	own_diameter = left_diameter + right_diameter + 1
+	return max(left_diameter,right_diameter,own_diameter)
+
+
+print(max_diameter(binary_tree(values)))
 
 
