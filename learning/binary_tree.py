@@ -1,6 +1,8 @@
 from collections import deque
 
-values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,4,-1,-1,-1]
+values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1]
+# values = [1, 2, 4, 7, -1, -1, -1, 5b, -1, 8, -1, -1, 3, -1, -1]
+
 i=-1
 count = 0
 
@@ -91,10 +93,29 @@ def max_diameter(node):
 		return 0
 	left_diameter = max_diameter(node.left)
 	right_diameter = max_diameter(node.right)
-	own_diameter = left_diameter + right_diameter + 1
+	own_diameter = height(node.left) + height(node.right)+ 1
 	return max(left_diameter,right_diameter,own_diameter)
 
+class TreeInfo:
+	ht = 0
+	diam = 0
 
-print(max_diameter(binary_tree(values)))
+	def __init__(self,ht,diam):
+		self.ht = ht
+		self.diam = diam
+
+
+def diameter(node):
+	if not node:
+		return 0,0
+
+	left_height,left_diameter = diameter(node.left)
+	right_height, right_diameter = diameter(node.right)
+	own_diameter = left_height + right_height + 1
+
+	return max(left_height,right_height)+1,  max(left_diameter, right_diameter,own_diameter)
+
+
+print(diameter(binary_tree(values)))
 
 
