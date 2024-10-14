@@ -78,6 +78,6 @@ def count_nodes(node):
 
 
 count_nodes(binary_tree(values))
-print(count)
+print(count_nodes)
 
 
