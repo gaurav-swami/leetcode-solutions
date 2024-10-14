@@ -69,15 +69,15 @@ def level_order(node):
         	q.append(node.right)
 
 def count_nodes(node):
-	global count
 	if not node:
-		return
-	count+=1
-	count_nodes(node.left)
-	count_nodes(node.right)
+		return 0
+	return count_nodes(node.left) + count_nodes(node.right) + 1
 
+def sum_nodes(node):
+	if not node:
+		return 0
+	return sum_nodes(node.left) + sum_nodes(node.right)  + node.val
 
-count_nodes(binary_tree(values))
-print(count_nodes)
+print(sum_nodes(binary_tree(values)))
 
 
