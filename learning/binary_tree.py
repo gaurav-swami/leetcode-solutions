@@ -2,6 +2,7 @@ from collections import deque
 
 values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1]
 i=-1
+count = 0
 
 class Node:
 	def __init__(self,val,left = None,right = None):
@@ -48,7 +49,7 @@ def  breadth_first_search(node):
 		if node.left: q.append(node.left)
 		if node.right: q.append(node.right)	
 
-def breadth_first_display(node):
+def level_order(node):
     if not node: 
         return    
     q = deque([node])
@@ -67,11 +68,16 @@ def breadth_first_display(node):
         if node.right:
         	q.append(node.right)
 
-       
-        
+def count_nodes(node):
+	global count
+	if not node:
+		return
+	count+=1
+	count_nodes(node.left)
+	count_nodes(node.right)
 
 
-breadth_first_display(binary_tree(values))
-
+count_nodes(binary_tree(values))
+print(count)
 
 
