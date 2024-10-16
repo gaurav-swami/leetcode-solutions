@@ -105,6 +105,8 @@ class TreeInfo:
 		self.diam = diam
 
 
+#max diameter
+
 def diameter(node):
 	if not node:
 		return 0,0
