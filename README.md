@@ -1,3 +1,9 @@
 #Problems to solve Again
 
-1. Problem-94 : Iterative Solution
+Problem-94 : Iterative Solution
+
+
+
+#Problems Solved but left for preview
+
+Problem-543 : Compare with neetcode solution 
