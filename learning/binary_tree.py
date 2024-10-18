@@ -1,7 +1,10 @@
 from collections import deque
+from typing import Optional
 
 values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1]
-# values = [1, 2, 4, 7, -1, -1, -1, 5b, -1, 8, -1, -1, 3, -1, -1]
+# values = [2,4,-1,-1,5,-1,-1]
+# values_2 = [2,6,-1,-1,5,-1,-1]
+# values = [1, 2, 4, 7, -1, -1, -1, 5, -1, 8, -1, -1, 3, -1, -1]
 
 i=-1
 count = 0
@@ -15,7 +18,7 @@ class Node:
 def binary_tree(values: list)->Node:
 	global i
 	i+=1
-	if values[i]==-1 or i>=len(values): 
+	if i>=len(values) or values[i]==-1  : 
 		return None
 	node = Node(values[i])
 	node.left = binary_tree(values)
@@ -116,6 +119,19 @@ def diameter(node):
 	own_diameter = left_height + right_height + 1
 
 	return max(left_height,right_height)+1,  max(left_diameter, right_diameter,own_diameter)
+
+
+def subbertree(t1: Optional[Node], t2: Optional[Node]):
+	if not t1 and not t2:
+		return True
+
+	if (not t1) != (not t2):
+		return False
+
+	if t1.val == t2.val:
+		if subtree(t1.left, t2.left) and subtree(t1.right, t2.right):
+			return True
+
 
 
 print(diameter(binary_tree(values)))
