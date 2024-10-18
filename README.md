@@ -1,7 +1,7 @@
 #Problems to solve Again
 
-Problem-94 : Iterative Solution
-Problem-144: Iterative Solution
+Problem-0094 : Iterative Solution
+Problem-00144: Iterative Solution
 
 
 
