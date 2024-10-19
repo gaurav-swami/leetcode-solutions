@@ -25,8 +25,8 @@ def binary_search_recursive (arr: List[int],target: int, start: int, end: int  )
 			return binary_search_recursive(arr,target,mid+1, end)
 		else:
 			return mid
-	else:
-		return -1
+	
+	return -1
 
 arr = [0,3,4,5,9,11,12,]
 # arr = []
