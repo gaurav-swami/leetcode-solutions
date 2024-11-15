@@ -16,3 +16,7 @@ class Solution:
         
         postOrder(root)
         return trav
+
+
+class Solution:
+    def postordertraversla(sel,root:Opto)
