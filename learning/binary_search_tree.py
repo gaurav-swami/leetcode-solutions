@@ -7,7 +7,6 @@ class Node:
 		self.right = right
 
 
-
 i=0
 
 def inorder(root: Optional[Node]):

@@ -19,6 +19,19 @@ def binary_search(arr: List[int],target:int)->int:
 	return -1
 
 
+def binary_search_recursive (arr:List[int], target: int,start:int,end:int)->int:
+	if start<=end:
+		mid = (start + end)//2
 
-print(binary_search(list1,8))
+		if target < arr[mid]:
+			return binary_search_recursive(arr,target,start,mid-1)
+
+		elif target > arr[mid]:
+			return binary_search_recursive(arr,target,mid+1,end)
+
+		else:
+			return mid
+	return -1
+
+print(binary_search_recursive(list1,8,0,len(list1)-1))
 

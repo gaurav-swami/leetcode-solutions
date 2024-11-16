@@ -2,8 +2,6 @@ from collections import deque
 from typing import Optional
 
 values = [1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1]
-# values = [2,4,-1,-1,5,-1,-1]
-# values_2 = [2,6,-1,-1,5,-1,-1]
 values = [1, 2, 4, 7, -1, -1, -1, 5, -1, 8, -1, -1, 3, -1, -1]
 
 i=-1
