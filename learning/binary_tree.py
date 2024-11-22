@@ -130,8 +130,17 @@ def subbertree(t1: Optional[Node], t2: Optional[Node]):
 		if subtree(t1.left, t2.left) and subtree(t1.right, t2.right):
 			return True
 
+def iterative_dfs(node: Optional[Node])->Node:
+	stk = [node]
+
+	while stk:
+		node = stk.pop()
+		print (node.val,end=" ")
+		if node.right: stk.append(node.right)
+		if node.left: stk.append(node.left)
 
 
-print(diameter(binary_tree(values)))
+
+iterative_dfs(binary_tree(values))
 
 
