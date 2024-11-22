@@ -139,8 +139,29 @@ def iterative_dfs(node: Optional[Node])->Node:
 		if node.right: stk.append(node.right)
 		if node.left: stk.append(node.left)
 
+def bfs (node:Optional[Node])->Node:
+	q = deque()
+	q.append(node)
+
+	while q:
+		node = q.popleft()
+		print(node.val,end=" ")
+		if node.left: q.append(node.left)
+		if node.right: q.append(node.right)
+
+def search(node: Optional[Node],target:int)->bool:
+
+	if not node:
+		return False
+
+	if node.val == target:
+		return True
+
+	return search(node.left,target)
+	return saerch(node.right,target)
 
 
-iterative_dfs(binary_tree(values))
+
+print(search(binary_tree(values),69))
 
 
