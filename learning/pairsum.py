@@ -19,7 +19,7 @@ def pairsum(arr: List[int],target: int):
 		if ps < target:
 			i += 1
 		elif ps > target:
-			j -= 1
+			j -= 11
 		else:
 			return i,j
 			
