@@ -1,23 +1,14 @@
 from typing import List
 
 def mostwater(height: List[int])->int:
-	water = []
-	left = 0
-	right = 0
+	water = 0
+	left = -1
+	right = 
 	add = 0
 
-	while right < len(height):
-		if height[right] > height[left]:
-			water.append(add)
-			add = 0
-			left = right
-			right += 1 
-			continue
+	for i in range(0,len(height)):
 
 
-		add = add + (height[left]-height[right])
-	
-		right += 1
 
 	return water
 
