@@ -1,20 +1,31 @@
+# class Solution:
+#     def isAnagram(self, s: str, t: str) -> bool:
+#         t_dict = {}
+#         s_dict = {}
+#         for i in s:
+#             if i in s_dict:
+#                 s_dict[i]+=1
+#             else:
+#                 s_dict[i] = 1
+#         for j in t:
+#             if j in t_dict:
+#                 t_dict[j]+=1
+#             else:
+#                 t_dict[j]=1
+#         return (t_dict==s_dict)
+#         
 
-def isAnagram( s, t):
-    """
-    :type s: str
-    :type t: str
-    :rtype: bool
-    """
-    if len(s)!=len(t):
-        return False
-    else:
-        for i in s:
-            if i not in t:
-                return False
-        return True
+# above is my own code
 
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s)!=len(t):
+            return False
+        count_char = {}
+        for i in range(len(s)):
+            count_char[s[i]] = count_char.get(s[i],0) + 1
+            count_char[t[i]] = count_char.get(t[i],0) - 1
 
-s1,t1 = "anagram", "nagaram"
-s2,t2 = "rat", "car"
+        return all(not count for count in count_char.values())
 
-print(isAnagram(s2,t2))
+        
