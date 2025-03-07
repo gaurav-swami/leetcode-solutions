@@ -12,7 +12,9 @@ class HashTable:
 
 	def __setitem__(self,key,val):
 		h = self.get_hash(key)
-		self.arr[h] = val
+		for i in range (0,len(self.arr[h])):
+			if i not None:
+				self.arr[h][i] = val
 
 	def __getitem__(self,key):
 		h = self.get_hash(key)
