@@ -7,4 +7,4 @@ class Solution:
         left = self.diameterOfBinaryTree(root.left)+1
         right = self.diameterOfBinaryTree(root.right)+1
         diameter = left+right
-        return max(left,right)
+        return max(diameter,)

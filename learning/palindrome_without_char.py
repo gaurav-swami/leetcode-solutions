@@ -5,10 +5,10 @@ def is_palindrome(s: str)->bool:
 	right = len(s)-1
 
 	while left<=right:
-		while left<right and not is_alphanum(s[left]):
-			left += 1
-		while left<right and not is_alphanum(s[right]):
-			right -= 1
+		# while left<right and not is_alphanum(s[left]):
+		# 	left += 1
+		# while left<right and not is_alphanum(s[right]):
+		# 	right -= 1
 
 		if s[left].lower()!=s[right].lower():
 			return False
