@@ -11,7 +11,7 @@ class LinkedList:
         self.tail = self.head
         
     
-    def get(self, index: int) -> int:
+    def get(self, index: int) -> int
         curr = self.head.next
         i=0
 
@@ -60,4 +60,3 @@ class LinkedList:
             curr = curr.next
         
         return res
-k
