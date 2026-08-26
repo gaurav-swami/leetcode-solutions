@@ -1,4 +1,4 @@
-def reverse ( a, l=0, r=None):
+def reverse (a, l=0, r=None):
     if not r :
         r = len (a)-1
     if l>=r:
