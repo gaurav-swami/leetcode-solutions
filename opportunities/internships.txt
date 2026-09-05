@@ -1,0 +1,109 @@
+#Quarters for timeline
+
+Quarter-1 [ July | Aug | Sep ]
+Quarter-2 [ Oct  | Nov | Dec ]
+Quarter-3 [ Jan  | Feb | Mar ]
+Quarter-4 [ Apr  | May | Jun ]
+
+Opportunities
+
+1. Microsoft Explore Internship ( for 1st year and 2nd year )
+    -> Start Around Feb Quarter-3
+    -> PPI possible for later years
+
+2. Cisco Ideathon Internship ( for 4th year students )
+    -> Quarter-4, June
+    -> Dream Package, PPO possible
+
+3. Flipkart GRiD Hackathon ( All year Students )
+    -> Quarter-4, June-July
+    -> Internship, from hackathon, winning doesn't confirm internship and       internship is not only provided to those who win
+
+4. Code for <good> hackathon JP Morgan
+    -> Final Year students 6 months internships
+    -> PPO possible 
+    -> Quarter-4, April
+
+5. Amazon HackOn ( for 3rd and 4th year students )
+    -> 2-3 members teams
+    -> prizes and internships
+
+6. Infosys InStep (all year)
+    -> Generic, visit site for more info 
+
+7. Google STEP Internship ( 1st and 2nd year)
+    -> 10-12 weeks
+    -> Quarter-1 and Quarter -2 September and October 
+    -> DSA
+    -> CS Fundamentals
+
+8. Juspay Hiring Challenge ( 3rd, 4th year students )
+    -> Internship & Full Time Offer
+    -> Internship + PPO
+    -> Quarter-1 (august)
+
+9. Tech Next Challenge by Accenture 
+    -> Quarter -1, July
+
+10. Goldman Sachs GS India Hackathon
+    -> Few colleges
+    -> Quarter-4, April
+
+11. Smart India Hackathon 
+    -> Quarter-1 July
+
+12. Imagine Cup Microsoft
+    -> Quarter-2
+
+13. Solution Challenge Google
+    -> Quarter-3
+
+14. Hacker Cup
+    -> Quarter-2 
+
+15. University Internships (amazon, google, microsoft)
+    -> on campus
+    -> off campus
+    -> Referal is required
+
+16. GSOC 
+    -> Start preparing early from October november
+    -> Feb, Jan
+    -> Development experience
+
+17. MLH Fellowship
+    -> Not happening this year
+    -> Quarter - 1, aug
+
+18. Research Internships
+    -> Quarter -2 november, jan
+    -> Actual start january
+
+19. Google Student Researcher
+    -> Quarter-3 Jan, feb
+
+20. TCS Research Internship
+    -> Quarter-3 Jan, feb
+
+21. Pm internship Scheme
+    -> 6/9 months
+    -> 9k per month 
+    -> 18-25
+    -> All year
+
+22. DRDO & ISRO Internship
+    -> AI/ML
+    -> Embedded Systems
+    -> Aerospace engineering 
+    -> No stipend
+    -> Quarter-4, generally all year round
+
+23. 5G Innovation Hackathon
+    -> ministory of telecommunication
+    -> Quarter-3, March
+
+24. Digital India Internship
+    -> All domains departments
+    -> Quarter-4 April
+
+Link for all from apna college = 
