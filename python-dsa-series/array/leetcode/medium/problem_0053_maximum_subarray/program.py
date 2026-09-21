@@ -15,5 +15,4 @@ class Solution(object):
         return bigger
 
 #time complexity = O(n)
-#space complexity = O(1)class Solution(object):
-
+#space complexity = O(1)
