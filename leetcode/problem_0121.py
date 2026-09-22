@@ -1,20 +1,16 @@
-from typing import List
-
-
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        if len(prices) == 1: return 0
-        l,r = 0,1
-        maxP = 0
-        while r < len(prices):
-            if prices[l] < prices[r]:
-                profit =  prices[r]-prices[l]
-                maxP = max(profit,maxP)
-            else:
-                l = r
-            r+=1
-        return maxP
-
-x = Solution()
-print(x.maxProfit([7,1,5,3,6,4]))
-
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        max_profit = 0
+        buy = prices[0]
+        for sell in prices:
+            profit =  sell - buy
+            if profit > max_profit:
+                max_profit = profit
+            if sell < buy:
+                buy = sell
+        
+        return max_profit
