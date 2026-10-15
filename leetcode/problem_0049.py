@@ -1,7 +1,7 @@
 # from typing import List
 
 # def groupAnagrams( strs: List[str]) -> List[List[str]]:
-        
+
 #         list2 = []
 #         list3 = []
 #         dick = {}
@@ -16,7 +16,7 @@
 #             else:
 #                 list3[dick[i]].append(strs[n])
 
-        
+
 
 
 # strs = ["eat","tea","tan","ate","nat","bat"]
@@ -33,7 +33,4 @@ class Solution:
                 count[ord(c)-ord('a')] += 1
             res[tuple(count)].append(i)
 
-        return list(res.values()) 
-            
-
-        
+        return list(res.values())
