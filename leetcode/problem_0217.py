@@ -1,19 +1,28 @@
-#cannot pass the test
+#solution 
+class Solution:
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        s = set()
 
-def containsDuplicate( nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                if nums[i]==nums[j] and i!=j:
-                    return True
+        for i in nums:
+            if i in s:
+                return True
+            s.add(i)
 
         return False
 
-nums1 = [1,2,3,1]
-nums2 = [1,2,3,4]
+#time complexity = O(n)
+#space complexity = O(n)
 
-print(containsDuplicate(nums1))
-print(containsDuplicate(nums2))
+#solution2 
+
+class Solution2:
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        nums.sort()
+
+        for i in range(1,len(nums)):
+            if nums[i] == nums[i-1]:
+                return True
+
+        return False
+#time complexity = O(n*logn)
+#space complexity = O(1)
