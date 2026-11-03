@@ -1,19 +1,19 @@
 # Definition for singly-linked list.
-# class ListNode(object):
+# class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
-
-# this is the solution using the iteration method (using stack)
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        node = None
+    def reverseList(self, head: ListNode | None) -> ListNode | None:
 
+        prev = None 
         while head:
             temp = head.next
-            head.next = node
-            node = head
+            head.next = prev
+            prev = head 
             head = temp
-        
-        return node
+
+        return  prev
+
+#time complexity = O(n)
+#space complexity = O(n)
