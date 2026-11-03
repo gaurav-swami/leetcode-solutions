@@ -1,0 +1,9 @@
+class Solution:
+    def middleNode(self, head: ListNode | None) -> ListNode | None:
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slo
+#time complexity = O(n)
+#space complexity = O(1)

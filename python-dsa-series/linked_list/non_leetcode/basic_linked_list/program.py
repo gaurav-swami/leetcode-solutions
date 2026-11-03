@@ -28,21 +28,51 @@ class Singly:
             print('None')
 
     def insert_pos(self,val,pos):
-        n = Node(val) 
-        count = 0
-        curr = self.head
-        if count == 0:
-            n.next = self.heazz
-        while count < pos:
-            curr = curr.next
+            new_node = Node(val)
+
+            if pos == 0:
+                new_node.next = self.head
+                self.head = new_node
+
+            elif pos>0:
+                curr = self.head
+                prev = None
+                count = 0
+                while count < pos and curr:
+                    prev = curr
+                    curr = curr.next
+                    count += 1
+                
+                prev.next = new_node
+                new_node.next = curr
+            
+            else:
+                print('Invalid Position')
+
+    def delete(self,val):
+        if not self.head:
+            print("Out of bounds")
+            return 
         
+        : 
         
+
 
 
 
 s = Singly()
 
+
 s.append(1)
 s.append(2)
 s.append(3)
+s.append(4)
+s.append(5)
+s.append(6)
+s.traverse()
+
+s.insert_pos(69,3)
+
+s.traverse()
+s.delete(6)
 s.traverse()
