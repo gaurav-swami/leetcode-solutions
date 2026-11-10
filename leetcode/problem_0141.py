@@ -11,3 +11,5 @@ class Solution:
                 return True
         
         return False
+#time complexity = O(n/2)
+#space complexity = O(1)
